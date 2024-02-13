@@ -1,24 +1,14 @@
-﻿Band brunoMars = new("Bruno Mars");
+﻿Podcast leocodelab = new("Leonardo", "Leocodelab");
 
-Album unorthodoxJukebox = new("Unorthodox Jukebox");
-Album dooWops = new("Doo-Wops & Hooligans");
+Episode episode1 = new("C# é difícil?", 3600, 2);
+Episode episode2 = new("O que é POO?", 4200, 1);
 
-Music music1 = new("When I Was Your Man", brunoMars, 200);
-Music music2 = new("Locked Out Of Heaven", brunoMars, 212);
+episode1.AddGuest("Leocodelab");
+episode1.AddGuest("Mano Deyvin");
 
-Music music3 = new("Grenade", brunoMars, 205);
-Music music4 = new("Just The Way You Are", brunoMars, 204);
+leocodelab.AddEpisode(episode1);
+leocodelab.AddEpisode(episode2);
 
-unorthodoxJukebox.AddMusic(music1);
-unorthodoxJukebox.AddMusic(music2);
+Console.WriteLine(episode1.Resume);
 
-dooWops.AddMusic(music3);
-dooWops.AddMusic(music4);
-
-brunoMars.AddAlbum(unorthodoxJukebox);
-brunoMars.AddAlbum(dooWops);
-
-dooWops.ShowAlbum();
-unorthodoxJukebox.ShowAlbum();
-
-brunoMars.ShowDiscography();
+leocodelab.ShowDetails();
